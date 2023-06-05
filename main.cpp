@@ -1,12 +1,13 @@
 #include "mbed.h"
-
-DigitalOut myled(LED1);
-
-int main() {
-  while(1) {
-    myled = 1;
-    wait(0.2);
-    myled = 0;
-    wait(0.2);
-  }
+#include "HEPTA_EPS.h"
+HEPTA_EPS eps(PA_0,PA_4);
+Serial pc(USBTX,USBRX,9600);
+int main()
+{
+    float btvol;
+    for(int i=0;i<10;i++) {
+        eps.vol(&btvol);
+        pc.printf("Voltage = %f\r\n",btvol);
+        wait_ms(1000);
+    }
 }
