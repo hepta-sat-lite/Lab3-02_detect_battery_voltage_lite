@@ -1,11 +1,11 @@
-#ifndef MBED_HEPTAEPS_H
-#define MBED_HEPTAEPS_H
+#ifndef MBED_LITEEPS_H
+#define MBED_LITEEPS_H
 #include "HeptaBattery.h"
  
-class HEPTA_EPS : public HeptaBattery{
+class LITE_EPS : public HeptaBattery{
 public:
     //HeptaBattery battery;
-    HEPTA_EPS(
+    LITE_EPS(
             PinName bat,
             PinName bat_ct
     );
