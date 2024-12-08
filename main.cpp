@@ -10,6 +10,6 @@ int main()
     for(int i = 0; i < 10; i++) {
         eps.vol(&bt);
         pc.printf("Vol = %f\r\n",bt);
-        wait(1.0);
+        wait_ms(1000);
     }
 }
